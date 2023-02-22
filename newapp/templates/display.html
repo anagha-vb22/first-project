@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>email</th>
+        <th>phone</th>
+        <th>address</th>
+        <th>pincode</th>
+        <th>password</th>
+    </tr>
+    {% for i in a %}
+      <tr>
+          <td>{{i.id}}</td>
+          <td>{{i.name}}</td>
+          <td>{{i.email}}</td>
+          <td>{{i.phone}}</td>
+          <td>{{i.address}}</td>
+          <td>{{i.pincode}}</td>
+          <td>{{i.password}}</td>
+      </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

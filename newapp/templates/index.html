@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.Navlink{
+    margin:0px 20px;
+    font-size:18px;
+    color:white;
+    text-decoration:none;
+    }
+
+#navbar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: .5rem 5rem;
+    box-shadow: 5px 5px 20px rgba(0,0,0,.9);
+    background: black;
+}
+
+.navbar .navbar-brand{
+    font-size: 25px;
+    font-weight: 800;
+    color: #29f700 !important;
+
+}
+
+#navbarSupportedContent a{
+
+    border-bottom: 2px solid transparent;
+}
+
+#navbarSupportedContent a:hover{
+    border-bottom: 2px solid #29f700;
+}
+
+#navbarSupportedContent button{
+    background:  rgb(13, 240, 32);
+    width: 5rem;
+    border-radius: 15px;
+}
+
+section{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home{
+    background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.7)),url("{% static 'abc.jpg' %}");
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    
+}
+
+#home h1{
+    font-size: 100px;
+    color: white;
+    letter-spacing: 3px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 0px 1px 0px #CCC,
+                 0px 2px 0px #CCC,
+                 0px 3px 0px #CCC,
+                 0px 4px 0px #CCC,
+                 0px 5px 0px #CCC,
+                 0px 6px 0px #CCC,
+                 0px 7px 0px #CCC;
+
+
+}        
+
+#home p{
+    font-size: 20px;
+    color: beige;
+}
+
+#home .input-group{
+    width: 40%;
+    height: 45px;
+}
+
+
+#about{
+    background: linear-gradient(to right,#e92975,#ef5174 100%);
+}
+
+#about h1{
+    font-weight: 800;
+    font-size: 50px;
+    color: white;
+}
+
+#about p{
+    color: bisque;
+}
+
+#product{
+    background: #e5e5e5;
+}
+
+#product h1{
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+#product img{
+    width: 200px;
+    height: 200px;
+}
+
+.card{
+    width: 250px;
+    height: 300px;
+    background: #e5e5e5 !important;
+    border: none !important;
+    box-shadow: 15px 20px 20px rgba(0,0,0,.3),
+                inset 4px 4px 10px white;
+    border-radius: 20px !important;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 60px;
+    transition: .2s;            
+
+}
+
+.card:hover{
+    box-shadow: inset 5px 5px 10px rgba(0,0,0,.3),
+                inset -4px -4px 10px white;
+    transition: .2s;
+
+}
+
+#contact img{
+    height: 100%;
+}
+
+.box{
+    width: 80% !important;
+    margin-top: 10px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+#contact input{
+    margin: 10px 0px;
+}
+
+#contact textarea{
+    margin: 10px 0px;
+}
+  </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spices</title>
+  <script crossorigin="anonymous" src="https://kit.fontawesome.com/ab4495b31a.js"></script>
+ 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">SPICES</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-expanded="false">
+         
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">HOME</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#about">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#product">PRODUCT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#contact">CONTACT</a>
+              </li>
+              <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            ACCOUNT
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="http://127.0.0.1:8000/newapp/creg/">CUSTOMER REGISTER</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:8000/newapp/clogin/">LOG IN</a></li>
+
+            
+
+          </ul>
+        </li>
+                <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            BECOME A SELLER
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="http://127.0.0.1:8000/newapp/sregister/">SHOP REGISTER</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:8000/newapp/slogin/">LOG IN</a></li>
+          </ul>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/admin">ADMIN</a>
+              </li>
+
+
+
+        </li>
+
+
+            </ul>
+            <a href="http://127.0.0.1:8000/newapp/cartdisplay/" class="Navlink">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+
+             <a href="http://127.0.0.1:8000/newapp/wishlistdisplay/" class="Navlink">
+              <i class="fa-sharp fa-solid fa-heart"></i>
+            </a>
+
+
+
+          </div>
+        </div>
+
+
+
+      </nav>
+
+
+
+  <section id="home">
+    <h1 class="text-center">ORGANIC SPICES</h1>
+    <p>Variety's the very spices of life,That gives it all its flavour</p>
+  </section>
+  <section id="about">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-12">
+          <img src="{% static 'about.png' %}" class="img-fluid">
+
+        </div>
+        <div class="col-lg-6 col-md-6 col-12">
+          <h1>ABOUT US</h1>
+          <P>keralaspicesOnline.com is a first-of-its-kind online spice store conceived by a team of management
+            professionals with decades of domain knowledge. Also, passion for promoting healthy and qualitative spices –
+            the natural and traditional way is the driving force behind this venture.
+
+            Keralaspicesonline.com is India’s first online spices store. With over 40 major types of spices that are
+            used to cook, you will find everything you are looking for as a tastemaker. Choose from a wide range of
+            options in spices, exclusively handpicked to help you find the best quality available at the lowest prices.
+            It is from the land of spices like Udumbumchola Taluk and Peermadu Taluk of the Idukki district of Kerala.
+            Kumily, Vandanmedu, Thekkady, Munnar, and Kattappana are the major places of spice production in Kerala.
+
+            Kerala spices online spices store is an online seller for high-quality spices like cardamom, Pepper, Nutmeg,
+            Clove, tea, coffee, etc. Here you will be able to buy export quality spices at low prices as collected
+            directly from the farmers at Kumily(Thekkady), Kattappana, and Nedumkandam which are the land of spices.
+            Here we offer all kinds of masalas that can add taste to your favorite dishes and food. We guarantee on-time
+            delivery and the best quality because we are from the land of spices in Kerala!
+
+            Our specialties.
+            Option to choose Payment via Internet banking, debit card, credit card, Paytm, Paypal for International
+            customers
+            Low price and High Quality
+            International Delivery.
+            Timely delivery
+            24/7 support
+            Why you should buy from this online spices store?
+            A decade of domine knowledge of spices.
+            More than 25000 trusted customers from different parts of the world
+            Wide varieties of spices, herbs, Ayurveda products, savories
+            It is a supermarket of spices.
+            We are from the Land of spices
+            Highly rated and reviewed online spices store. Check our reviews on google
+          </P>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="product">
+    <div class="container m-5">
+      <h1 class="text-center my-5">OUR PRODUCTS</h1>
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+            <img src="{% static 'img1.png' %}" class="card-img-top">
+            <div class="card-body text-center">
+              <h5 class="card-title">Turmeric powder</h5>
+
+              <a href="#" class="btn signin">Add To Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+            <img src="{% static 'coriander .png' %}" class="card-img-top">
+            <div class="card-body text-center">
+              <h5 class="card-title">Coriander powder</h5>
+
+              <a href="#" class="btn signin">Add To Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+            <img src="{% static 'img2.png' %}" class="card-img-top">
+            <div class="card-body text-center">
+              <h5 class="card-title">Red chilli powder</h5>
+
+              <a href="#" class="btn signin">Add To Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+            <div class="card">
+              <img src="{% static 'black.png' %}" class="card-img-top">
+              <div class="card-body text-center">
+                <h5 class="card-title">Black Pepper</h5>
+
+                <a href="#" class="btn signin">Add To Cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-12">
+            <div class="card">
+              <img src="{% static 'Mace.png' %}" class="card-img-top">
+              <div class="card-body text-center">
+                <h5 class="card-title">Mace powder</h5>
+
+                <a href="#" class="btn signin">Add To Cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-12">
+            <div class="card">
+              <img src="{% static 'Img0.png' %}" class="card-img-top">
+              <div class="card-body text-center">
+                <h5 class="card-title">Cardamom</h5>
+
+                <a href="#" class="btn signin">Add To Cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <img src="{% static 'Imge.png' %}" class="card-img-top">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Clove</h5>
+
+                  <a href="#" class="btn signin">Add To Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <img src="{% static 'Jeera.png' %}" class="card-img-top">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Jeera</h5>
+
+                  <a href="#" class="btn signin">Add To Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+              <div class="card">
+                <img src="{% static 'Imgg.png' %}" class="card-img-top">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Ginger</h5>
+
+                  <a href="#" class="btn signin">Add To Cart</a>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+  </section>
+  <section id="contact">
+    <div class="container box">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-12">
+          <img src="{% static 'contact.jpg' %}" class="img-fluid">
+        </div>
+        <div class="col-lg-6 col-md-6 col-12">
+          <h1>CONTACT US</h1>
+          <form class="mb-3">
+            <input type="text" class="form-control" placeholder="Enter your name">
+            <input type="email" class="form-control" placeholder="Enter your mail">
+            <textarea class="form-control" placeholder="Enter your message"></textarea>
+            <button class="btn signin">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
